@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Progress App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#111827" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>My Progress App</h1>
+      <p>Daily missions, learning, and streaks</p>
+    </header>
+
+    <section class="auth-box">
+      <input id="username" type="text" placeholder="Enter your name" />
+      <button id="loginBtn">Login</button>
+      <button id="logoutBtn" class="secondary hidden">Logout</button>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="top-row">
+        <h2>Categories</h2>
+        <button id="addCategoryBtn" class="secondary">+ Add Category</button>
+      </div>
+
+      <div id="categories" class="categories"></div>
+
+      <div class="panel">
+        <h3 id="selectedCategoryTitle">Select a category</h3>
+        <textarea id="entryText" placeholder="Write your progress here..."></textarea>
+        <button id="saveEntryBtn">Save Entry</button>
+      </div>
+
+      <div class="panel">
+        <h3>Saved Entries</h3>
+        <div id="entriesList" class="entries"></div>
+      </div>
+    </section>
+  </div>
+
+  <dialog id="categoryDialog">
+    <form method="dialog" class="dialog-form">
+      <h3>Add Category</h3>
+      <input id="newCategoryName" type="text" placeholder="Category name" />
+      <menu class="dialog-actions">
+        <button value="cancel" class="secondary">Cancel</button>
+        <button id="createCategoryBtn" value="default">Add</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
