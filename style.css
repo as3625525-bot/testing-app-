@@ -1,0 +1,97 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #111827);
+  color: #e5e7eb;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-box, .panel, .top-row, .dialog-form {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  background: #111827;
+  color: #fff;
+  outline: none;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+button.secondary {
+  background: #374151;
+}
+
+.hidden {
+  display: none;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.category-card {
+  background: #1d4ed8;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.category-card.active {
+  outline: 3px solid #f59e0b;
+}
+
+.entries {
+  display: grid;
+  gap: 10px;
+}
+
+.entry {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.entry small {
+  color: #9ca3af;
+}
